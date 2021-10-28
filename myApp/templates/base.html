@@ -1,2 +1,15 @@
-base.html
+<!DOCTYPE html>
+<html>
+	<head>
+		{% if title %}
+		<title>{{ title }} </title>
+		{% else %}
+		<title>Home</title>
+		{% endif %}
+	</head>
 
+	<body>
+		<hr>
+		{% block content %} {% endblock %}
+	</body>
+</html>

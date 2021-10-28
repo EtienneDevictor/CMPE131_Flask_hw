@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		{% if title %}
-		<title>{{ title }} </title>
-		{% else %}
-		<title>Home</title>
-		{% endif %}
-	</head>
+{% extends "base.html" %}
 
-	<body>
-		<h1> Welcome {{ name }}, here are top destinations <h1>
-		<a href="https://www.google.com">goooogle</a>
-		{% for city in top_cities %}
-		<div>
-			<p> {{ city }} </p>
-		<div>
-		{% endfor %}
-	</body>
-</html>
+{% block content %}
+	<h1> Welcome {{ name }}, here are top destinations <h1>
+	<a href="https://www.google.com">goooogle</a>
+	{% for city in top_cities %}
+	<div>
+		<p> {{ city }} </p>
+	<div>
+	{% endfor %}
+{% endblock %}
