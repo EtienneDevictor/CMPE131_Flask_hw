@@ -10,7 +10,6 @@
 
 	<body>
 		<h1> Welcome {{ name }}, here are top destinations </h1>
-		<a href="https://google.com">goooogle</a>
 		{% with messages = get_flashed_messages() %} <!--will flash messages underneath the goooogle button on the web page -->
 		{% if messages %}
 		<ul>
@@ -20,6 +19,7 @@
 		</ul>
 		{% endif %}
 		{% endwith %}				<!--the flask messages block ends here-->
+		<a href="https://google.com">goooogle</a>
 		<hr>
 		{% block content %} {% endblock %}
 	</body>
