@@ -1,11 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<h1> Welcome {{ name }}, here are top destinations <h1>
-	<a href="https://www.google.com">goooogle</a>
-	{% for city in top_cities %}
+	{% for city in top_cities %} <!-- the loop that displays the cities in ranked order -->
 	<div>
 		<p> {{ city }} </p>
 	<div>
 	{% endfor %}
+	<form action="" method="post" novalidate>
+		{{ form.hidden_tag() }}
+		<p>
+			{{ form.city_name.label }} {{ form.city_name(size=32) }}<br>
+		</p>
+		<p>
+			{{ form.city_rank.label }} {{ form.city_rank(size=32) }} <br>
+		</p>
+		<p>
+			{{ form.is_visted.label }} {{ form.is_visted() }} <br>
+		</p>
+		<p>
+			{{ form.submit.label }} {{ form.submit() }} <br>
+		</p>
+	</form>
 {% endblock %}
