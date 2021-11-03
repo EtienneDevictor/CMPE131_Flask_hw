@@ -9,10 +9,12 @@ myObj = Flask(__name__)
 
 myObj.config.from_mapping(
 	SECRET_KEY = 'any string works',
-	SQLALCHEMY_DATABASE_URI = 'sqlite://' + os.path.join(basedir, 'app.db'),
+	SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db'),
 	SQLALCHEMY_TRACK_MODIFICATIONS = False,
 )
 
 db = SQLAlchemy(myObj)
 
-from myApp import routes
+
+from myApp import routes, models
+

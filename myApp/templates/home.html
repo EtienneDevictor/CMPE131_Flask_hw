@@ -3,7 +3,7 @@
 {% block content %}
 	{% for city in top_cities %} <!-- the loop that displays the cities in ranked order -->
 	<div>
-		<p> {{ city }} </p>
+		<li> {{ city }} </li>
 	<div>
 	{% endfor %}
 	<form action="" method="post" novalidate>
@@ -15,7 +15,7 @@
 			{{ form.city_rank.label }} {{ form.city_rank(size=32) }} <br>
 		</p>
 		<p>
-			{{ form.is_visted.label }} {{ form.is_visted() }} <br>
+			{{ form.is_visited.label }} {{ form.is_visited() }} <br>
 		</p>
 		<p>
 			{{ form.submit.label }} {{ form.submit() }} <br>
